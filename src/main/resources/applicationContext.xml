@@ -7,10 +7,12 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <!-- Define your beans here -->
+    <!-- Load property file -->
+    <context:property-placeholder location="classpath:sports.properties"/>
 
+    <!-- Define your beans here -->
     <bean id="myFortune"
-          class="com.heastie.fortunes.HappyFortuneService">
+          class="com.heastie.fortunes.RandomFortuneService">
     </bean>
 
     <bean id="myCoach"
@@ -21,8 +23,8 @@
     <bean id="myCricketCoach"
           class="com.heastie.coaches.CricketCoach">
         <property name="fortuneService" ref="myFortune"/>
-        <property name="emailAddress" value="thebestcoach@luv2code.com"/>
-        <property name="team" value="Sunrisers Hyderabad"></property>
+        <property name="emailAddress" value="${will.email}"/>
+        <property name="team" value="${will.team}"></property>
     </bean>
 </beans>
 

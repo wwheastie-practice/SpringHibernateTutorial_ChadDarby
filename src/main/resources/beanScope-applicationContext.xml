@@ -7,24 +7,20 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <!-- Load property file -->
-    <context:property-placeholder location="classpath:sports.properties"/>
-
     <!-- Define your beans here -->
     <bean id="myFortune"
           class="com.heastie.fortunes.RandomFortuneService">
     </bean>
 
     <bean id="myCoach"
-          class="com.heastie.coaches.BasketballCoach">
+          class="com.heastie.coaches.TrackCoach">
         <constructor-arg ref="myFortune"></constructor-arg>
     </bean>
 
-    <bean id="myCricketCoach"
-          class="com.heastie.coaches.CricketCoach">
-        <property name="fortuneService" ref="myFortune"/>
-        <property name="emailAddress" value="${will.email}"/>
-        <property name="team" value="${will.team}"></property>
+    <bean id="myPrototypeCoach"
+          class="com.heastie.coaches.TrackCoach"
+          scope="prototype">
+        <constructor-arg ref="myFortune"></constructor-arg>
     </bean>
 </beans>
 

@@ -9,7 +9,7 @@ public class CricketCoach implements Coach {
     private String team;
 
     public CricketCoach() {
-        System.out.println("CricketCoach: inside of constructor");
+        System.out.println("**CricketCoach: inside of constructor**");
     }
 
     public String getDailyWorkout() {
@@ -21,7 +21,7 @@ public class CricketCoach implements Coach {
     }
 
     public void setFortuneService(FortuneService fortuneService) {
-        System.out.println("CricketCoach: inside of setter method");
+        System.out.println("**CricketCoach: inside of setter method**");
         this.fortuneService = fortuneService;
     }
 
