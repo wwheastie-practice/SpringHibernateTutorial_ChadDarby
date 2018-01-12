@@ -10,12 +10,19 @@
     <!-- Define your beans here -->
 
     <bean id="myFortune"
-          class="com.heastie.fortunes.GreatFortuneService">
+          class="com.heastie.fortunes.HappyFortuneService">
     </bean>
 
     <bean id="myCoach"
           class="com.heastie.coaches.BasketballCoach">
         <constructor-arg ref="myFortune"></constructor-arg>
+    </bean>
+
+    <bean id="myCricketCoach"
+          class="com.heastie.coaches.CricketCoach">
+        <property name="fortuneService" ref="myFortune"/>
+        <property name="emailAddress" value="thebestcoach@luv2code.com"/>
+        <property name="team" value="Sunrisers Hyderabad"></property>
     </bean>
 </beans>
 
