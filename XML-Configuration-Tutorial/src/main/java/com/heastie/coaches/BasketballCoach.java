@@ -17,4 +17,9 @@ public class BasketballCoach implements Coach {
     public String getDailyFortune() {
         return fortuneService.getFortune();
     }
+
+    @Override
+    public boolean equals(Object theCoach) {
+        return this == theCoach;
+    }
 }
