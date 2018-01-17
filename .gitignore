@@ -1,3 +1,5 @@
 # IDE Generated Files #
 .idea
 *.iml
+.classpath
+.project
