@@ -3,10 +3,12 @@ package net.heastie.mvc;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.servlet.http.HttpServletRequest;
 
 @Controller
+@RequestMapping("/hello")
 public class HelloWorldController {
 
     //Need a controller method to show initial HTML form
@@ -34,6 +36,22 @@ public class HelloWorldController {
 
         //Create message
         String result = "Yo! " + theName;
+
+        //Add message to the model
+        model.addAttribute("message", result);
+
+        return "helloworld";
+
+    }
+
+    @RequestMapping("/processFormVersionThree")
+    public String processFormVersionThree(@RequestParam("studentName") String theName, Model model) {
+
+        //Convert the data to all upper case
+        theName = theName.toUpperCase();
+
+        //Create message
+        String result = "Hey Friend! " + theName;
 
         //Add message to the model
         model.addAttribute("message", result);

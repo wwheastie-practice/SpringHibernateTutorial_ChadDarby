@@ -1,2 +1,6 @@
 net\heastie\mvc\HelloWorldController.class
+net\heastie\mvc\Student.class
+net\heastie\mvc\SillyController.class
+net\heastie\mvc\StudentController.class
+net\heastie\mvc\Countries.class
 net\heastie\mvc\HomeController.class
