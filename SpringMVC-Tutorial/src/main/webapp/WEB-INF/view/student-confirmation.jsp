@@ -1,3 +1,5 @@
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+
 <!DOCTYPE html>
 
 <html>
@@ -12,6 +14,21 @@
         <br/>
 
         Country: ${student.country}
+
+        <br/>
+
+        Favorite Language: ${student.favoriteLanguage}
+
+        <br/>
+
+        Operating Systems:
+
+        <c:forEach var="temp" items="${student.operatingSystems}">
+
+            <li> ${temp} </li>
+
+        </c:forEach>
+
 	</body>
 
 </html>

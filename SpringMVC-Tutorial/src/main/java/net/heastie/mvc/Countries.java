@@ -4,19 +4,19 @@ import java.util.LinkedHashMap;
 
 public class Countries {
 
-    private LinkedHashMap<String, String> countryOptions;
+    private LinkedHashMap<String, String> options;
 
     public Countries () {
-        countryOptions = new LinkedHashMap<String, String>();
+        options = new LinkedHashMap<String, String>();
 
-        countryOptions.put("BR", "Brazil");
-        countryOptions.put("FR", "France");
-        countryOptions.put("DE", "Germany");
-        countryOptions.put("IN", "India");
-        countryOptions.put("US", "United States");
+        options.put("BR", "Brazil");
+        options.put("FR", "France");
+        options.put("DE", "Germany");
+        options.put("IN", "India");
+        options.put("US", "United States");
     }
 
-    public LinkedHashMap<String, String> getCountryOptions() {
-        return countryOptions;
+    public LinkedHashMap<String, String> getOptions() {
+        return options;
     }
 }

@@ -12,11 +12,15 @@ public class StudentController {
     @RequestMapping("/showForm")
     public String showForm(Model theModel) {
 
-        //Create Student object
+        //Create objects
         Student theStudent = new Student();
+        Countries countries = new Countries();
+        FavoriteProgrammingLanguages favoriteProgrammingLanguages = new FavoriteProgrammingLanguages();
 
-        //Add Student object to the model
+        //Add objects to the model
         theModel.addAttribute("student", theStudent);
+        theModel.addAttribute("countries", countries);
+        theModel.addAttribute("favoriteLanguages", favoriteProgrammingLanguages);
 
         return "student-form";
     }
@@ -26,6 +30,11 @@ public class StudentController {
 
         //Log the input data
         System.out.println("theStudent: " + theStudent.getFirstName() + " " + theStudent.getLastName());
+
+        //Show Operating Systems
+        for (String operatingSystem:theStudent.getOperatingSystems()) {
+            System.out.println(operatingSystem);
+        }
 
         return "student-confirmation";
     }

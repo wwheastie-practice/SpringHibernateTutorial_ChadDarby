@@ -1,6 +1,11 @@
-net\heastie\mvc\HelloWorldController.class
+net\heastie\mvc\validation\CourseCode.class
 net\heastie\mvc\Student.class
+net\heastie\mvc\Customer.class
+net\heastie\mvc\CustomerController.class
 net\heastie\mvc\SillyController.class
 net\heastie\mvc\StudentController.class
-net\heastie\mvc\Countries.class
+net\heastie\mvc\validation\CourseCodeConstraintValidator.class
 net\heastie\mvc\HomeController.class
+net\heastie\mvc\HelloWorldController.class
+net\heastie\mvc\FavoriteProgrammingLanguages.class
+net\heastie\mvc\Countries.class
