@@ -15,7 +15,7 @@ public class UpdateStudent {
         Session session = factory.getCurrentSession();
 
         try {
-            int studentId = 3004;
+            int studentId = 3;
 
             //Start the transaction
             session.beginTransaction();
@@ -32,22 +32,21 @@ public class UpdateStudent {
             Student myStudent = session.get(Student.class, studentId);
 
             System.out.println("Updating student...");
-            myStudent.setFirstName("Scooby");
-            myStudent.setEmail("scooby@luv2code.com");
+            myStudent.setEmail("john@luv2code.com");
 
             //Commit the transaction
             session.getTransaction().commit();
 
             //Updating all students
             //Get new session
-            session = factory.getCurrentSession();
-            session.beginTransaction();
-
-            System.out.println("Update email for all students");
-
-            session.createQuery("update Student set email='foo@gmail.com'").executeUpdate();
-
-            session.getTransaction().commit();
+//            session = factory.getCurrentSession();
+//            session.beginTransaction();
+//
+//            System.out.println("Update email for all students");
+//
+//            session.createQuery("update Student set email='foo@gmail.com'").executeUpdate();
+//
+//            session.getTransaction().commit();
 
             System.out.println("Done!");
         } finally {
